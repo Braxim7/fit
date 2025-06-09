@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAF3OM Summer Fitness Program</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            font-size: 3em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h2 {
+            font-size: 1.5em;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+
+        .header .course-info {
+            background: #3498db;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            margin-bottom: 30px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .section h3 {
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .workout-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .workout-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .workout-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .workout-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .workout-table tr:hover {
+            background: #e3f2fd;
+            transition: all 0.3s ease;
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .day-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #ecf0f1;
+            transition: all 0.3s ease;
+        }
+
+        .day-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .day-card.workout {
+            background: #e8f5e8;
+            border-color: #27ae60;
+        }
+
+        .day-card.rest {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #ff6b6b, #feca57);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .nutrition-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 15px;
+            border-left: 5px solid #3498db;
+            margin: 20px 0;
+        }
+
+        .reference-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            border-left: 4px solid #27ae60;
+        }
+
+        @media (max-width: 768px) {
+            .schedule-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .container {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Title Page -->
+        <div class="header">
+            <h1>Summer Fitness Program</h1>
+            <h2>60-Minute Workout Program for Ectomorph Body Type</h2>
+            <div class="course-info">PAF3OM - Personal Learning Assessment</div>
+            <div style="margin-top: 20px; font-size: 1.2em; color: #34495e;">
+                <strong>By:</strong> Maxim Tucovic<br>
+                <strong>For:</strong> Mr. Whitfield
+            </div>
+        </div>
+
+        <!-- Program Overview -->
+        <div class="section">
+            <h2>Program Overview</h2>
+            
+            <h3>Purpose of the Overall Program</h3>
+            <div class="highlight-box">
+                This program focuses on muscle building and strength development for ectomorph body types. Since ectomorphs have faster metabolisms and struggle to gain weight, the program uses minimal cardio to maximize muscle mass gains.
+            </div>
+
+            <h3>Type/Format of Workouts</h3>
+            <p><strong>Primary Format:</strong> Sequential sets with compound movements that work multiple muscle groups at once</p>
+            <p><strong>Secondary Elements:</strong> Short cardio sessions and some circuit training to meet cardiovascular requirements without burning too many calories</p>
+
+            <h3>Components of Personal Fitness to Improve</h3>
+            <ul style="list-style: disc; padding-left: 40px;">
+                <li><strong>Muscular Strength:</strong> Using progressive resistance training to build bigger and stronger muscles</li>
+                <li><strong>Muscular Endurance:</strong> Higher rep ranges in some exercises to build stamina</li>
+                <li><strong>Cardiovascular Endurance:</strong> Light cardio to improve heart health without interfering with muscle gains</li>
+                <li><strong>Body Composition:</strong> Focus on building lean muscle mass to increase overall body weight</li>
+                <li><strong>Flexibility:</strong> Stretching and mobility work to prevent injuries</li>
+            </ul>
+
+            <h3>Reasons for Choosing This Workout Type</h3>
+            <p>This program is designed specifically for ectomorph body types who typically have trouble gaining weight and muscle. Ectomorphs have fast metabolisms and burn calories quickly, so they need strength-focused training with limited cardio. The sequential set format gives enough rest time between exercises to lift heavier weights and build more muscle. This approach is better than doing lots of cardio or circuit training that would burn too many calories and make it harder to gain muscle mass.</p>
+        </div>
+
+        <!-- Workout Programs -->
+        <div class="section">
+            <h2>Workout Programs</h2>
+            
+            <h3>Workout A - Upper Body Focus</h3>
+            <table class="workout-table">
+                <thead>
+                    <tr>
+                        <th>Exercise Name</th>
+                        <th>Major Muscles Worked</th>
+                        <th>Sets</th>
+                        <th>Reps</th>
+                        <th>Rest Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Light Jogging</td>
+                        <td>Cardiovascular System</td>
+                        <td>1</td>
+                        <td>5-8 minutes</td>
+                        <td>2 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>2. Push-ups</td>
+                        <td>Chest, Shoulders, Triceps</td>
+                        <td>4</td>
+                        <td>8-12</td>
+                        <td>90 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>3. Bodyweight Squats</td>
+                        <td>Quadriceps, Glutes, Calves</td>
+                        <td>4</td>
+                        <td>12-15</td>
+                        <td>90 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>4. Pull-ups/Assisted Pull-ups</td>
+                        <td>Latissimus Dorsi, Biceps</td>
+                        <td>4</td>
+                        <td>6-10</td>
+                        <td>2 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>5. Standard Plank</td>
+                        <td>Core, Abs, Shoulders</td>
+                        <td>3</td>
+                        <td>30-60 seconds</td>
+                        <td>60 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>6. Dumbbell Rows</td>
+                        <td>Rhomboids, Middle Traps</td>
+                        <td>4</td>
+                        <td>10-12</td>
+                        <td>90 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>7. Overhead Press</td>
+                        <td>Shoulders, Triceps</td>
+                        <td>4</td>
+                        <td>8-10</td>
+                        <td>2 minutes</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Workout B - Lower Body Focus</h3>
+            <table class="workout-table">
+                <thead>
+                    <tr>
+                        <th>Exercise Name</th>
+                        <th>Major Muscles Worked</th>
+                        <th>Sets</th>
+                        <th>Reps</th>
+                        <th>Rest Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Stationary Bike</td>
+                        <td>Cardiovascular System</td>
+                        <td>1</td>
+                        <td>6-10 minutes</td>
+                        <td>2 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>2. Goblet Squats</td>
+                        <td>Quadriceps, Glutes</td>
+                        <td>4</td>
+                        <td>10-12</td>
+                        <td>2 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>3. Incline Push-ups</td>
+                        <td>Chest, Anterior Deltoids</td>
+                        <td>3</td>
+                        <td>10-15</td>
+                        <td>90 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>4. Romanian Deadlifts</td>
+                        <td>Hamstrings, Glutes, Lower Back</td>
+                        <td>4</td>
+                        <td>8-10</td>
+                        <td>2 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>5. Side Planks</td>
+                        <td>Obliques, Core</td>
+                        <td>3</td>
+                        <td>20-40 seconds each side</td>
+                        <td>60 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>6. Walking Lunges</td>
+                        <td>Quadriceps, Glutes, Calves</td>
+                        <td>3</td>
+                        <td>12-16 each leg</td>
+                        <td>90 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>7. Bicep Curls</td>
+                        <td>Biceps</td>
+                        <td>3</td>
+                        <td>12-15</td>
+                        <td>60 seconds</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Workout C - Full Body Circuit</h3>
+            <table class="workout-table">
+                <thead>
+                    <tr>
+                        <th>Exercise Name</th>
+                        <th>Major Muscles Worked</th>
+                        <th>Sets</th>
+                        <th>Reps</th>
+                        <th>Rest Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1. Jump Rope</td>
+                        <td>Cardiovascular System, Calves</td>
+                        <td>1</td>
+                        <td>5-8 minutes</td>
+                        <td>2 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>2. Decline Push-ups</td>
+                        <td>Upper Chest, Shoulders</td>
+                        <td>3</td>
+                        <td>8-12</td>
+                        <td>90 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>3. Bulgarian Split Squats</td>
+                        <td>Quadriceps, Glutes</td>
+                        <td>3</td>
+                        <td>10-12 each leg</td>
+                        <td>90 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>4. Chin-ups</td>
+                        <td>Biceps, Latissimus Dorsi</td>
+                        <td>4</td>
+                        <td>5-8</td>
+                        <td>2 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>5. Russian Twists</td>
+                        <td>Obliques, Rectus Abdominis</td>
+                        <td>3</td>
+                        <td>20-30</td>
+                        <td>60 seconds</td>
+                    </tr>
+                    <tr>
+                        <td>6. Dumbbell Deadlifts</td>
+                        <td>Hamstrings, Glutes, Traps</td>
+                        <td>4</td>
+                        <td>8-10</td>
+                        <td>2 minutes</td>
+                    </tr>
+                    <tr>
+                        <td>7. Tricep Dips</td>
+                        <td>Triceps, Chest</td>
+                        <td>3</td>
+                        <td>10-15</td>
+                        <td>90 seconds</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Weekly Schedule -->
+        <div class="section">
+            <h2>Weekly Schedule Template</h2>
+            <div class="schedule-grid">
+                <div class="day-card workout">
+                    <h3>Monday</h3>
+                    <p><strong>Workout A</strong></p>
+                    <p>Upper Body Focus</p>
+                </div>
+                <div class="day-card workout">
+                    <h3>Tuesday</h3>
+                    <p><strong>Workout B</strong></p>
+                    <p>Lower Body Focus</p>
+                </div>
+                <div class="day-card rest">
+                    <h3>Wednesday</h3>
+                    <p><strong>Active Rest</strong></p>
+                    <p>Swimming or Light Activity</p>
+                </div>
+                <div class="day-card workout">
+                    <h3>Thursday</h3>
+                    <p><strong>Workout C</strong></p>
+                    <p>Full Body Circuit</p>
+                </div>
+                <div class="day-card workout">
+                    <h3>Friday</h3>
+                    <p><strong>Workout A</strong></p>
+                    <p>Upper Body Focus</p>
+                </div>
+                <div class="day-card workout">
+                    <h3>Saturday</h3>
+                    <p><strong>Workout B</strong></p>
+                    <p>Lower Body Focus</p>
+                </div>
+                <div class="day-card rest">
+                    <h3>Sunday</h3>
+                    <p><strong>Complete Rest</strong></p>
+                    <p>Recovery Day</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Activities -->
+        <div class="section">
+            <h2>Additional Physical Activities</h2>
+            
+            <div class="highlight-box">
+                <h3>Swimming</h3>
+                <p><strong>Frequency:</strong> 2 days per week (Wednesday & Sunday)</p>
+                <p><strong>Duration:</strong> 30-45 minutes per session</p>
+                <p><strong>Who:</strong> Solo or with family members</p>
+                <p><strong>Where:</strong> Local community pool or lake</p>
+            </div>
+
+            <h3>Why Swimming?</h3>
+            <p>Swimming is a great choice because it provides cardiovascular exercise without being too intense. For ectomorphs who are trying to gain muscle, swimming is perfect because it doesn't burn as many calories as running or other high-intensity cardio. It also helps with recovery by getting blood flowing to sore muscles after weight training sessions. Swimming works the whole body and helps improve flexibility and mobility, which can prevent injuries. Since it's low-impact, it won't interfere with muscle growth or cause excess fatigue that could hurt performance in the weight training workouts.</p>
+        </div>
+
+        <!-- Nutrition -->
+        <div class="section">
+            <h2>Nutrition Recommendations</h2>
+            
+            <div class="nutrition-card">
+                <h3>Ectomorph Nutrition Strategy</h3>
+                
+                <h4>1. Increase Caloric Density</h4>
+                <p>Since ectomorphs have fast metabolisms and burn calories quickly, it's important to eat calorie-dense foods. This means choosing foods that have a lot of calories in a small amount. Good examples include nuts, peanut butter, avocados, olive oil, and lean meats like chicken and beef. Adding healthy fats to meals is a smart way to get more calories without having to eat huge portions. This extra energy helps support muscle growth and recovery from workouts.</p>
+                
+                <h4>2. Frequent Meal Timing</h4>
+                <p>Instead of eating three big meals, ectomorphs should eat 5-6 smaller meals throughout the day. This keeps energy levels steady and makes sure the body always has fuel for building muscle. Each meal should include some protein like chicken, eggs, or protein powder. Post-workout protein shakes are especially important because they help muscles recover and grow. Eating frequently also helps ectomorphs consume enough total calories since they often struggle to eat large amounts at one time.</p>
+            </div>
+        </div>
+
+        <!-- References -->
+        <div class="section">
+            <h2>References</h2>
+            
+            <div class="reference-item">
+                <p>American College of Sports Medicine. (2018). <em>ACSM's guidelines for exercise testing and prescription</em> (10th ed.). Wolters Kluwer.</p>
+            </div>
+            
+            <div class="reference-item">
+                <p>Bompa, T., & Buzzichelli, C. (2019). <em>Periodization: Theory and methodology of training</em> (6th ed.). Human Kinetics.</p>
+            </div>
+            
+            <div class="reference-item">
+                <p>Schoenfeld, B. J. (2020). Science and development of muscle hypertrophy. <em>Human Kinetics</em>.</p>
+            </div>
+            
+            <div class="reference-item">
+                <p>National Academy of Sports Medicine. (2021). <em>NASM essentials of personal fitness training</em> (6th ed.). Jones & Bartlett Learning.</p>
+            </div>
+            
+            <div class="reference-item">
+                <p>Sheldon, W. H. (1940). <em>The varieties of human physique</em>. Harper & Brothers.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
