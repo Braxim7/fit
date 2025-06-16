@@ -1,461 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>60-Minute Weekly Workout Program for Ectomorph & Endomorph</title>
-<style>
-  /* Reset & base */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    background: #f0f4f8;
-    color: #333;
-  }
-  header {
-    background: #0366d6;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    letter-spacing: 1.2px;
-  }
-  header p {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-    font-weight: 300;
-  }
-
-  main {
-    max-width: 960px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-    background: white;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    border-radius: 10px;
-  }
-
-  section {
-    margin-bottom: 2.5rem;
-  }
-
-  section h2 {
-    border-bottom: 3px solid #0366d6;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1rem;
-    color: #0366d6;
-  }
-
-  p {
-    margin-bottom: 1rem;
-    text-align: justify;
-  }
-
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 1rem 0;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    border-radius: 6px;
-    overflow: hidden;
-  }
-
-  th, td {
-    padding: 0.8rem 1rem;
-    text-align: left;
-  }
-  thead {
-    background-color: #0366d6;
-    color: white;
-  }
-  tbody tr:nth-child(even) {
-    background: #f9faff;
-  }
-  tbody tr:hover {
-    background: #e0e7ff;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    header h1 {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>60-Minute Workout Program for Ectomorph & Endomorph</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f0f4f8;
+      color: #2c3e50;
+      line-height: 1.6;
+    }
+    header {
+      background: #34495e;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
       font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
     }
     main {
-      margin: 1rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+      background: white;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #2980b9;
+      border-bottom: 3px solid #2980b9;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+    h3 {
+      color: #34495e;
+      margin-top: 1.5rem;
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    p {
+      margin-top: 0.4rem;
+      font-size: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      padding: 0.8rem 0.6rem;
+      border: 1px solid #ddd;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+    th {
+      background-color: #2980b9;
+      color: white;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
       padding: 1rem;
+      background: #34495e;
+      color: white;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      user-select: none;
     }
-    table, thead, tbody, th, td, tr {
-      display: block;
+    @media (max-width: 600px) {
+      main {
+        margin: 1rem;
+        padding: 1rem;
+      }
+      th, td {
+        font-size: 0.85rem;
+        padding: 0.5rem;
+      }
     }
-    thead tr {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-    tr {
-      margin-bottom: 1.5rem;
-      border-bottom: 2px solid #0366d6;
-      padding-bottom: 0.5rem;
-    }
-    td {
-      border: none;
-      position: relative;
-      padding-left: 50%;
-      text-align: right;
-    }
-    td::before {
-      position: absolute;
-      top: 0;
-      left: 1rem;
-      width: 45%;
-      padding-right: 1rem;
-      white-space: nowrap;
-      font-weight: bold;
-      text-align: left;
-      color: #0366d6;
-    }
-    td:nth-of-type(1)::before { content: "Exercise Name"; }
-    td:nth-of-type(2)::before { content: "Major Muscle Group"; }
-    td:nth-of-type(3)::before { content: "Sets"; }
-    td:nth-of-type(4)::before { content: "Reps"; }
-    td:nth-of-type(5)::before { content: "Rest Time"; }
-  }
-
-  /* Accent box for non workout & nutrition */
-  .highlight-box {
-    background-color: #e1f0ff;
-    border-left: 6px solid #0366d6;
-    padding: 1rem 1.2rem;
-    border-radius: 5px;
-  }
-
-  footer {
-    text-align: center;
-    font-size: 0.9rem;
-    color: #666;
-    margin: 3rem 0 1rem 0;
-  }
-</style>
+  </style>
 </head>
 <body>
+
 <header>
-  <h1>60-Minute Weekly Workout Program</h1>
-  <p>Designed for Ectomorph & Endomorph Body Types — Summer Holiday Edition</p>
+  60-Minute Weekly Workout Program for Ectomorph & Endomorph Body Types
 </header>
 
 <main>
-  <section>
+
+  <section id="program-purpose">
     <h2>Program Purpose</h2>
     <p>
-      This comprehensive 60-minute weekly workout program is thoughtfully designed to help individuals with ectomorph and endomorph body types achieve their fitness goals over the summer holidays. For ectomorphs, the primary objective is to increase lean muscle mass and overall strength through structured resistance training combined with moderate cardio, addressing their naturally slim build and fast metabolism. In contrast, the endomorph-focused program emphasizes fat loss, cardiovascular health, and muscular toning, taking into account their tendency to gain fat more easily and a slower metabolic rate. By tailoring workouts and nutrition to these distinct body types, the program aims to foster healthier lifestyles, boost confidence, and promote sustainable physical fitness improvements.
+      This full 60-minute a-week exercise program is carefully crafted to assist ectomorph and endomorph users in attaining their fitness objectives during the summer vacations. For ectomorphs, the main goal is to build lean muscle mass and total strength by virtue of organized resistance training and modest cardio, combating their naturally lean frame and quick metabolism. On the other hand, the program founded on endomorphs is designed for fat loss, cardiovascular conditioning, and muscle firming, countering their tendency to gain fat more easily and possess a lowered metabolic rate. By modifying exercise and nutrition according to these individual body characteristics, the program attempts healthier habits, boosted confidence, and sustainable physical fitness improvement.
     </p>
   </section>
 
-  <section>
-    <h2>Workout Type & Format</h2>
+  <section id="workout-type-format">
+    <h2>Workout Type and Format</h2>
     <p>
-      The workouts employ a hybrid training format that blends circuit training with high-intensity interval training (HIIT) principles. This combination is chosen to optimize both muscular endurance and cardiovascular fitness within a 60-minute session. Circuit training allows participants to target different muscle groups with minimal rest between exercises, thereby maintaining an elevated heart rate and maximizing calorie burn. The inclusion of HIIT-style cardio intervals ensures efficient fat burning and cardiovascular improvements, especially beneficial for endomorphs. Each session is carefully structured to cycle through lower body, upper body, core, and cardio exercises, providing balanced and full-body conditioning tailored to each body type’s needs.
+      The workout makes use of a hybrid training program, fusing circuit training with high-intensity interval training (HIIT) principles. The combined methodology is chosen in order to achieve both muscular endurance and cardiovascular health during a 60-minute session. Circuit training engages participants in working different muscle groups with minimal or no rest space between the exercises, thereby maintaining a high heart rate and expending more calories. The combination of HIIT-style cardio intervals assures efficient fat loss with cardiovascular gain, best for endomorphs. Each exercise session is well structured to switch between lower body, upper body, core, and cardio exercises, providing balanced as well as full-body conditioning most tailored to each body type's needs.
     </p>
   </section>
 
-  <section>
+  <section id="components-targeted">
     <h2>Components of Personal Fitness Targeted</h2>
     <p>
-      This program is designed to improve multiple components of personal fitness, including muscular strength, muscular endurance, cardiovascular endurance, core stability, and flexibility. For ectomorphs, the focus is more on building muscular strength and endurance to support muscle hypertrophy, while endomorphs will benefit from enhanced cardiovascular endurance and muscular toning to facilitate fat loss and body composition improvements. Additionally, core exercises are integrated daily to support posture, stability, and overall functional movement, which are essential for injury prevention and everyday activities.
+      This program is designed to increase various components of individual fitness, including muscular strength, muscular endurance, cardiovascular endurance, core stability, and flexibility. For the ectomorph, muscular strength and endurance development are prioritized to help with muscle hypertrophy, but for the endomorph, enhanced cardiovascular endurance and muscular toning will help with fat loss and body composition adaptation. Furthermore, daily exercises for the core are integrated to improve posture, stability, and overall functional movement that can be applied for injury prevention and everyday function.
     </p>
   </section>
 
-  <section>
-    <h2>Rationale Behind the Workout Design</h2>
+  <section id="rationale">
+    <h2>Rationale Behind Workout</h2>
     <p>
-      The distinct physiological and metabolic differences between ectomorphs and endomorphs require a customized approach. Ectomorphs, characterized by their lean frame and fast metabolism, benefit most from workouts focused on muscle hypertrophy with adequate rest periods to promote recovery and growth. Conversely, endomorphs require a program that elevates heart rate through cardio and promotes fat metabolism while maintaining muscle mass through circuit-style resistance training. The chosen format ensures workouts are efficient, engaging, and sustainable over time, making it easier for participants to commit to their fitness journey during the summer holidays.
+      The physiological and metabolic variations that make ectomorphs and endomorphs distinct from each other require a customized solution. The lean physique and fast rate of the ectomorph are best addressed by hypertrophy-type exercises with ample recovery time to rebuild and rejuvenate. The endomorph requires a program that increases heart rate via cardio and stimulates fat metabolism while maintaining muscle mass through circuit-type strength training. The preferred format ensures the exercises are effective, stimulating, and time-sustainable with room for effortless ability by participants to maintain their fitness program during the summer holiday.
     </p>
   </section>
 
-  <section>
-    <h2>Weekly Schedule</h2>
+  <section id="non-workout-activity">
+    <h2>Non-Workout Physical Activity</h2>
+    <p>
+      Aside from the exercise routines, at least one additional physical activity on non-training days is highly advised. Casual swimming, hiking, or enjoying friendly sports with family and friends are interactive exercises that keep a person active with the addition of cardiovascular health, emotional health, and socialization. For this program, it is recommended to engage in group sports or brisk walking 1-2 times per week, either alone or with friends/family members at local parks or public recreation centers. Such exercise activities provide variety to the fitness program and aid in motivation management and enhancing adherence to the fitness lifestyle in general.
+    </p>
+  </section>
+
+  <section id="ectomorph-nutrition">
+    <h2>Ectomorph Nutrition</h2>
+    <p>
+      Ectomorphs require a calorie-dense, nutrient-laden diet to promote muscle gain and recovery. Intake of complex carbohydrates through whole grains, sweet potatoes, and legumes will provide sustained levels of energy for intense training. Quality protein consumption in the form of lean meats, dairy, and plant foods will provide adequate amino acid levels to repair muscles. Healthy fats from nuts, seeds, and oils will aid hormone production as well as general well-being. Small, frequent snacks and meals consumed during the day can fulfill higher caloric needs without feeling too full.
+    </p>
+  </section>
+
+  <section id="endomorph-nutrition">
+    <h2>Endomorph Nutrition</h2>
+    <p>
+      Endomorphs find it beneficial to adhere to a balanced diet that limits carbohydrates and includes lean proteins, fiber vegetables, and healthy fats. Eating low glycemic index carbohydrates stabilizes blood sugar levels and curbs hunger. Taking frequent, small meals and hydration measures increases metabolic rate and aids in fat loss. Cutting back on processed sugars and saturated fats is crucial, and adding antioxidants via colorful vegetables and fruits enhances general well-being in the weight loss process.
+    </p>
+  </section>
+
+  <!-- Sample workout table for illustration -->
+  <section id="workout-sample">
+    <h2>Sample Weekly Workout Chart</h2>
     <table>
       <thead>
         <tr>
           <th>Day</th>
-          <th>Ectomorph Workout</th>
-          <th>Endomorph Workout</th>
-          <th>Rest / Activity</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Monday</td><td>Muscle Building A</td><td>Fat Loss HIIT A</td><td>—</td></tr>
-        <tr><td>Tuesday</td><td>Muscle Building B</td><td>Fat Loss Strength A</td><td>—</td></tr>
-        <tr><td>Wednesday</td><td>Rest</td><td>Rest</td><td>Light Walk or Stretching</td></tr>
-        <tr><td>Thursday</td><td>Muscle Building C</td><td>Fat Loss HIIT B</td><td>—</td></tr>
-        <tr><td>Friday</td><td>Rest</td><td>Rest</td><td>Active Play or Family Sports</td></tr>
-        <tr><td>Saturday</td><td>Optional Cardio/Recovery</td><td>Fat Loss Strength B</td><td>—</td></tr>
-        <tr><td>Sunday</td><td>Rest</td><td>Rest</td><td>—</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Ectomorph Workouts</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Exercise Name</th>
-          <th>Major Muscle Group</th>
-          <th>Sets</th>
-          <th>Reps</th>
-          <th>Rest Time</th>
+          <th>Workout Focus</th>
+          <th>Exercises</th>
+          <th>Cardio</th>
+          <th>Lower Body</th>
+          <th>Upper Body</th>
+          <th>Core</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Incline Push-ups</td>
-          <td>Chest, Triceps, Shoulders</td>
-          <td>4</td>
-          <td>8-12</td>
-          <td>90 sec</td>
+          <td>Monday</td>
+          <td>Ectomorph - Muscle Build</td>
+          <td>3 Sets, 8-12 Reps, 60s Rest</td>
+          <td>Jogging (10 min)</td>
+          <td>Squats</td>
+          <td>Pull-ups</td>
+          <td>Plank (60 sec)</td>
         </tr>
         <tr>
-          <td>Bodyweight Squats</td>
-          <td>Quadriceps, Glutes, Hamstrings</td>
-          <td>4</td>
-          <td>12-15</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Plank with Leg Lift</td>
-          <td>Core, Lower Back</td>
-          <td>3</td>
-          <td>Hold 30-45 sec</td>
-          <td>45 sec</td>
-        </tr>
-        <tr>
-          <td>Jump Rope</td>
-          <td>Cardiovascular System</td>
-          <td>5</td>
-          <td>1 min intervals</td>
-          <td>30 sec</td>
-        </tr>
-        <tr>
-          <td>Single-leg Glute Bridge</td>
-          <td>Glutes, Hamstrings</td>
-          <td>3</td>
-          <td>12-15 each leg</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Reverse Snow Angels</td>
-          <td>Upper Back, Shoulders</td>
-          <td>3</td>
-          <td>15</td>
-          <td>45 sec</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <h3>Muscle Building B</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Exercise Name</th>
-          <th>Major Muscle Group</th>
-          <th>Sets</th>
-          <th>Reps</th>
-          <th>Rest Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Diamond Push-ups</td>
-          <td>Chest, Triceps</td>
-          <td>4</td>
-          <td>6-10</td>
-          <td>90 sec</td>
-        </tr>
-        <tr>
-          <td>Step-ups (using stairs)</td>
-          <td>Quadriceps, Glutes</td>
-          <td>4</td>
-          <td>12-15 each leg</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Side Plank (each side)</td>
-          <td>Obliques, Core</td>
-          <td>3</td>
-          <td>Hold 30-40 sec</td>
-          <td>45 sec</td>
-        </tr>
-        <tr>
-          <td>Jogging (steady pace)</td>
-          <td>Cardiovascular System</td>
-          <td>1</td>
-          <td>15-20 min</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Glute Kickbacks</td>
-          <td>Glutes, Hamstrings</td>
-          <td>3</td>
-          <td>15 each leg</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Superman Hold</td>
-          <td>Lower Back, Core</td>
-          <td>3</td>
-          <td>Hold 30 sec</td>
-          <td>45 sec</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Endomorph Workouts</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Exercise Name</th>
-          <th>Major Muscle Group</th>
-          <th>Sets</th>
-          <th>Reps</th>
-          <th>Rest Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Staggered Push-ups</td>
-          <td>Chest, Triceps, Shoulders</td>
-          <td>4</td>
-          <td>10-14</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Jump Squats</td>
-          <td>Quadriceps, Glutes, Calves</td>
-          <td>4</td>
-          <td>12-15</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
+          <td>Wednesday</td>
+          <td>Endomorph - Fat Loss</td>
+          <td>4 Sets, 12-15 Reps, 30s Rest</td>
+          <td>HIIT Sprints (15 min)</td>
+          <td>Lunges</td>
+          <td>Push-ups (Incline)</td>
           <td>Russian Twists</td>
-          <td>Obliques, Core</td>
-          <td>3</td>
-          <td>20 (10 each side)</td>
-          <td>45 sec</td>
         </tr>
         <tr>
-          <td>HIIT Bike Sprints</td>
-          <td>Cardiovascular System</td>
-          <td>6</td>
-          <td>30 sec on / 30 sec off</td>
-          <td>30 sec</td>
-        </tr>
-        <tr>
-          <td>Walking Lunges</td>
-          <td>Glutes, Quadriceps, Hamstrings</td>
-          <td>3</td>
-          <td>12-14 each leg</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Side Plank with Reach Under</td>
-          <td>Obliques, Core</td>
-          <td>3</td>
-          <td>Hold 30 sec each side</td>
-          <td>45 sec</td>
+          <td>Friday</td>
+          <td>Ectomorph - Strength</td>
+          <td>3 Sets, 6-10 Reps, 90s Rest</td>
+          <td>Stationary Bike (10 min)</td>
+          <td>Deadlifts</td>
+          <td>Overhead Press</td>
+          <td>Side Plank (45 sec each)</td>
         </tr>
       </tbody>
     </table>
-
-    <h3>Fat Loss Strength A</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>Exercise Name</th>
-          <th>Major Muscle Group</th>
-          <th>Sets</th>
-          <th>Reps</th>
-          <th>Rest Time</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Incline Push-ups</td>
-          <td>Chest, Shoulders</td>
-          <td>4</td>
-          <td>12-15</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Bodyweight Step-ups</td>
-          <td>Quadriceps, Glutes</td>
-          <td>4</td>
-          <td>15 each leg</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Plank with Shoulder Taps</td>
-          <td>Core, Shoulders</td>
-          <td>3</td>
-          <td>20 taps</td>
-          <td>45 sec</td>
-        </tr>
-        <tr>
-          <td>HIIT Jump Rope</td>
-          <td>Cardiovascular System</td>
-          <td>5</td>
-          <td>1 min intervals</td>
-          <td>30 sec</td>
-        </tr>
-        <tr>
-          <td>Glute Bridges</td>
-          <td>Glutes, Hamstrings</td>
-          <td>3</td>
-          <td>15</td>
-          <td>60 sec</td>
-        </tr>
-        <tr>
-          <td>Bird-Dog</td>
-          <td>Lower Back, Core</td>
-          <td>3</td>
-          <td>15 each side</td>
-          <td>45 sec</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section>
-    <h2>Non-Workout Physical Activity</h2>
-    <div class="highlight-box">
-      <p>
-        To complement the workout routines, incorporating at least one additional physical activity on non-training days is highly encouraged. Activities such as hiking, recreational swimming, or playing casual sports with friends and family provide enjoyable ways to stay active while promoting cardiovascular health, mental well-being, and social connection. For this program, participants are recommended to engage in group sports or brisk walking for 1-2 days per week, either alone or with friends/family at local parks or community centers. These activities not only diversify the fitness routine but also help maintain motivation and improve adherence to the overall fitness lifestyle.
-      </p>
-    </div>
-  </section>
-
-  <section>
-    <h2>Nutrition Adjustments to Support Fitness Goals</h2>
-    <div class="highlight-box">
-      <h3>Ectomorph Nutrition</h3>
-      <p>
-        Ectomorphs should focus on a calorie-dense, nutrient-rich diet to support muscle growth and recovery. Prioritizing complex carbohydrates such as whole grains, sweet potatoes, and legumes will provide sustained energy for intense workouts. Incorporating quality proteins like lean meats, dairy, and plant-based options ensures adequate amino acid intake for muscle repair. Healthy fats from nuts, seeds, and oils aid hormone production and overall health. Frequent meals and snacks spaced evenly throughout the day can help meet higher caloric needs without feeling overly full.
-      </p>
-      <h3>Endomorph Nutrition</h3>
-      <p>
-        Endomorphs benefit from a balanced diet that moderates carbohydrates and emphasizes lean proteins, fiber-rich vegetables, and healthy fats. Prioritizing low glycemic index carbs helps stabilize blood sugar levels and manage hunger. Smaller, more frequent meals combined with hydration strategies can improve metabolic rate and support fat loss. Reducing processed sugars and saturated fats is essential, while incorporating antioxidants through colorful fruits and vegetables supports overall health during weight loss efforts.
-      </p>
-    </div>
   </section>
 
 </main>
